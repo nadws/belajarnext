@@ -1,27 +1,26 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { Button } from "../ui/button";
 
 const Navbar = () => {
   return (
     <>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-        <div className="group relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a
-            href="#"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            <Image
-              src="vercel.svg"
-              width={80}
-              height={80}
-              className="h-8"
-              alt="Flowbite Logo"
-            />
-            {/* <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
-            </span> */}
+      <nav className="bg-black border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+        <div className="group relative max-w-screen-xl flex  items-center justify-between mx-auto p-4">
+          <a href="#" className="flex float-start mr-8">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 80 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M37.5274 0L75.0548 65H0L37.5274 0Z" fill="#ffffff" />
+            </svg>
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+              Vercel
+            </span>
           </a>
 
           <button
@@ -50,42 +49,58 @@ const Navbar = () => {
           </button>
 
           <div
-            className="hidden group-hover:block w-full md:block md:w-auto"
+            className="hidden group-hover:block w-full md:block md:w-auto grow"
             id="navbar-dropdown"
           >
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul className="flex flex-row font-medium  rounded-lg   rtl:space-x-reverse   border-0  ">
               <li>
-                <Link
-                  href="/dashboard"
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
-                  aria-current="page"
-                >
-                  Home
+                <Link href="/dashboard" className="nav">
+                  Products
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
-                  Services
+                <a href="#" className="nav">
+                  Solutions
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
+                <a href="#" className="nav">
+                  Resources
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nav">
+                  Docs
+                </a>
+              </li>
+              <li>
+                <a href="#" className="nav">
                   Pricing
                 </a>
               </li>
+            </ul>
+          </div>
+          <div
+            className="hidden group-hover:block w-full md:block md:w-auto "
+            id="navbar-dropdown"
+          >
+            <ul className="flex flex-row font-medium  rounded-lg   rtl:space-x-reverse   border-0  ">
               <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >
+                <Link href="/dashboard" className="nav">
                   Contact
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Button
+                  className={
+                    "hover:bg-slate-500 hover:bg-opacity-25 border bg-black border-opacity-20 border-white"
+                  }
+                >
+                  Log In
+                </Button>
+              </li>
+              <li>
+                <Button className={"bg-white text-black ml-4"}>Sign Up</Button>
               </li>
             </ul>
           </div>
