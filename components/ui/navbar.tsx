@@ -6,11 +6,11 @@ import { Button } from "../ui/button";
 const Navbar = () => {
   return (
     <>
-      <nav className="bg-black border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-        <div className="group relative max-w-screen-xl flex  items-center justify-between mx-auto p-4">
+      <nav className="bg-black border-gray-200 dark:bg-gray-900 dark:border-gray-700 sticky z-10 top-0">
+        <div className="group relative  flex   justify-between  pt-4 pr-8 pl-8">
           <a href="#" className="flex float-start mr-8">
             <svg
-              width="40"
+              width="50"
               height="40"
               viewBox="0 0 80 80"
               fill="none"
@@ -81,12 +81,12 @@ const Navbar = () => {
             </ul>
           </div>
           <div
-            className="hidden group-hover:block w-full md:block md:w-auto "
+            className="hidden group-hover:block w-full md:block "
             id="navbar-dropdown"
           >
-            <ul className="flex flex-row font-medium  rounded-lg   rtl:space-x-reverse   border-0  ">
+            <ul className="flex flex-row font-medium  rounded-lg   rtl:space-x-reverse   border-0  float-end ">
               <li>
-                <Link href="/dashboard" className="nav">
+                <Link href="/dashboard" className="nav mr-2">
                   Contact
                 </Link>
               </li>
@@ -100,7 +100,11 @@ const Navbar = () => {
                 </Button>
               </li>
               <li>
-                <Button className={"bg-white text-black ml-4"}>Sign Up</Button>
+                <Button
+                  className={"bg-white hover:bg-slate-300 text-black ml-2"}
+                >
+                  Sign Up
+                </Button>
               </li>
             </ul>
           </div>
